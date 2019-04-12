@@ -1,0 +1,22 @@
+from abaqus import *
+from caeModules import *
+from abaqusConstants import *
+from odbAccess import *
+from math import *
+o1 = session.openOdb(name='C:/Temp/Job-6.odb')
+step = o1.steps
+step1 = step['Step-1']
+frame = step1.frames
+b=0
+iter=0
+while (b<=len(frame)-1):
+    session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+    session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=b)
+    session.viewports['Viewport: 1'].viewportAnnotationOptions.setValues(triad=OFF,
+    title=OFF, state=OFF, compass=OFF)
+    session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(CONTOURS_ON_DEF, ))
+    session.viewports['Viewport: 1'].viewportAnnotationOptions.setValues(legendPosition=(20, 98))
+    session.printToFile(fileName=str(iter), format=PNG, canvasObjects=(
+        session.viewports['Viewport: 1'], ))
+    b=b+1                                            
+    iter+=1
