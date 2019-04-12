@@ -7,4 +7,4 @@ The 3D Computer Aided Design (CAD) model of the impact problem is presented. The
 
 ![](./The_CAD_model_of_the_impact_case.jpg)
 
-The dataset of the impact process contains 5,633 images. The pixels of each one is 480x960x3.
+The dataset of the impact process contains 5,633 images. The pixels of each one is '480x960x3'.
