@@ -26,7 +26,8 @@ The images are read by ***cv2.imread***, and the read function is ***ImageReader
 Please cite our work if you write a scientific paper using this code and/or dataset.
 
 ```latex
-@article{title={Image-based reconstruction for strong-nonlinear transient problems by using an Enhanced ReConNN},
+@article{
+  title={Image-based reconstruction for strong-nonlinear transient problems by using an Enhanced ReConNN},
   author={Yu Lia, Hu Wanga, Wenquan Shuai},
   journal={...},
   year={2019}
