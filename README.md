@@ -34,8 +34,8 @@ Please cite our work if you write a scientific paper using this code and/or data
 ```latex
 @article{
   title={Image-based reconstruction for strong-nonlinear transient problems by using an Enhanced ReConNN},
-  author={Yu Lia, Hu Wanga, Wenquan Shuai},
-  journal={...},
+  author={Yu Lia, Hu Wanga, Wenquan Shuai, et al},
+  journal={arXiv:1905.03229},
   year={2019}
 }
 ```
