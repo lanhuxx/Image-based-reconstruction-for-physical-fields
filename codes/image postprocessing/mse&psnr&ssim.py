@@ -1,11 +1,21 @@
 import tensorflow as tf
 from PIL import Image
+import argparse
+
+# 把输入参数打印到屏幕 
+parser = argparse.ArgumentParser(description='')
+
+parser.add_argument("--train_path", default='E:/backups/impact2/punching press/xOy/images/801/', help="path of images.")
+parser.add_argument("--label_path", default='./CGAN_801_feature=1/', help="path of label.")
+parser.add_argument("--image_size", type=int, default=801, help="load image number") #网络输入的尺度
+
+args = parser.parse_args() #用来解析命令行参数
 
 sess = tf.Session()
 
-for i in range(801):
-	dir1 = 'E:/backups/impact2/punching press/xOy/images/801/%d.jpg' % int(i+1)
-	dir2 = './CGAN_801_feature=1/%d.jpg' % int(i+1)
+for i in range(args.image_size):
+	dir1 = args.train_path + str(i) + '.jpg'
+	dir2 = args.label + str(i) + '.jpg'
 	img1 = tf.gfile.FastGFile(dir1,'rb').read()
 	img1 =  tf.image.decode_jpeg(img1)
 	img2 = tf.gfile.FastGFile(dir2,'rb').read()
