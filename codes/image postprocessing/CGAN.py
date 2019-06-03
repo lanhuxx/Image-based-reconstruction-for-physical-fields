@@ -1,9 +1,3 @@
-# input: 训练样本的路径，学习率，训练步数
-# output：cgan预测的图像
-# 软件：python 3.6.0  tensorflow-gpu 1.10.0
-# 平台：Windows/Linux
-# 功能：由于autoencoder预测的结果精度不足，使用cgan进一步提升autoencoder中decoder的解码结果精度
-
 from __future__ import print_function
  
 import argparse
