@@ -1,13 +1,36 @@
-![](./EReConNN.png)
 # Image-based-reconstruction-for-physical-fields
+
   With the improvement of the pattern recognition and feature extraction of Deep Neural Networks (DPNNs), image-based design and optimization have been widely used in multidisciplinary researches. Recently, a [***Reconstructive Neural Network (ReConNN)***](https://www.sciencedirect.com/science/article/pii/S0017931018355017) has been proposed to obtain an image-based model from an analysis-based model. However, it has difficulties handling nonlinear transient impact problems.
   
   Therefore, an improved ReConNN, ***EReConNN***, method is proposed to address the mentioned weaknesses. Time-dependent ordered images can be generated. Furthermore, the improved method is successfully applied in impact simulation case and engineering experiment. Through the experiments, comparisons and analyses, the improved method is demonstrated to outperform the former one in terms of its accuracy, efficiency and costs.
 
+## Problem descriptions
+
+  As shown in the following figure, the 3D Computer Aided Design (CAD) model of the impact problem is presented. The impact body is a cuboid whose material is Al alloy 6,061-T6. It is defined with an initial velocity v0 along the negative direction of the z-axis. Furthermore, a 300 kg point mass is coupled in the center of the other side of the impact surface.
+
+![](./impactmodel.jpg)
+
+## The architecture of the proposed EReConNN
+
+  As shown in the following figure, Different from the ReConNN whose main tasks are image regression (Convolution in Convolution, CIC) and image generation (Compressed Wasserstein GAN, CWGAN), the EReConNN is mainly composed of feature extraction, physical field reconstruction and visualization enhancement by using the VAE and Conditional GAN (CGAN), respectively.
+  * In Step i, the contour image of each iteration during the simulation is collected.
+  * Then the VAE is employed to extract the features of the physical field in Step ii.
+  * After that, the time-dependent ordered feature values are interpolated in Step iii.
+  * Subsequently, all features are decoded by the decoder of the VAE that is trained in Step ii and the time-dependent ordered images can be generated. The reconstruction can be completed.
+  * Finally, the CGAN is applied to enhance the visualization of the reconstruction.
+  
+![](./EReConNN.jpg)
+
+### VAE
 ***Coming soon ......***
 
-![](./impact_case.jpg)
+### CGAN
+***Coming soon ......***
+
 # Data-set-of-a-3D-impact-case
+
+![](./impact_case.jpg)
+
 The warehouse of the training samples of the EReConNN
 
 The 3D Computer Aided Design (CAD) model of the impact problem is presented. The impact body is a cuboid whose material is Al alloy 6061-T6 as shown in Table 1, and defined with an initial velocity v0 along the negative direction of z-axis. Furthermore, a point mass of 300kg is coupled in the center of the other side of the collision surface, which is marked by using a red cross.
