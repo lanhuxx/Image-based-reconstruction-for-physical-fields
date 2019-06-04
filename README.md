@@ -19,7 +19,7 @@
   * Subsequently, all features are decoded by the decoder of the VAE that is trained in Step ii and the time-dependent ordered images can be generated. The reconstruction can be completed.
   * Finally, the CGAN is applied to enhance the visualization of the reconstruction.
   
-![](./EReConNN.jpg)
+![](./ReConNN.jpg)
 
 ### VAE
 ***Coming soon ......***
