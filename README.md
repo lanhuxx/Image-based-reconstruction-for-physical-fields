@@ -8,7 +8,7 @@
 
   As shown in the following figure, the 3D Computer Aided Design (CAD) model of the impact problem is presented. The impact body is a cuboid whose material is Al alloy 6,061-T6. It is defined with an initial velocity v0 along the negative direction of the z-axis. Furthermore, a 300 kg point mass is coupled in the center of the other side of the impact surface.
 
-![](./impactmodel.jpg)
+![](./impactmodel.jpg "Impact Model")
 
 ## The architecture of the proposed EReConNN
 
@@ -19,7 +19,7 @@
   * Subsequently, all features are decoded by the decoder of the VAE that is trained in Step ii and the time-dependent ordered images can be generated. The reconstruction can be completed.
   * Finally, the CGAN is applied to enhance the visualization of the reconstruction.
   
-![](./ReConNN.jpg)
+![](./ReConNN.jpg "EReConNN Structure")
 
 ### VAE
 ***Coming soon ......***
@@ -35,7 +35,7 @@ The warehouse of the training samples of the EReConNN
 
 The 3D Computer Aided Design (CAD) model of the impact problem is presented. The impact body is a cuboid whose material is Al alloy 6061-T6 as shown in Table 1, and defined with an initial velocity v0 along the negative direction of z-axis. Furthermore, a point mass of 300kg is coupled in the center of the other side of the collision surface, which is marked by using a red cross.
 
-![](./The_CAD_model_of_the_impact_case.jpg)
+![](./The_CAD_model_of_the_impact_case.jpg "Impact Cases")
 
 The dataset of the impact process contains 563 images. The pixels of each one is `480x960x3`. You can download the ***picture_480x960_563_samples.7z***, and a dataset with 5,633 samples will be upload subsequently.
 
