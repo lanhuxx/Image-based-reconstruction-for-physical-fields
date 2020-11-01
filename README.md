@@ -53,13 +53,6 @@ sample_size: number of different design of TW
 mesh_size: size of mesh
 ```
 
-You can generate your own dataset just modify the job name in the `code/` folder. `_abaqus8_.guiLog`:
-
-```
-o1 = session.openOdb(name='C:/Temp/Job-6.odb')
-```
-and then run it.
-
 ## How to use
 The images are read by ***cv2.imread***, and the read function is ***ImageReader*** in the `code/` folder. `image_reader.py`. The input to the function contains file name, input path, label path, picture format and size. As for the ***size***, in order to improve the universality of the algorithm, each image is re-sized to one of ***size*size*3*** by using the Bilinear Interpolation, so the ***size*** can be adjusted according to demand and its default value is 64.
 
