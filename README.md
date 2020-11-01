@@ -27,6 +27,9 @@
 ### CGAN
 ***Coming soon ......***
 
+### CNN
+***Coming soon ......***
+
 # Data-set-of-a-3D-impact-case
 
 ![](./impact_case.jpg)
@@ -57,7 +60,7 @@ Please cite our work if you write a scientific paper using this code and/or data
 
 ```latex
 @article{
-  title={Image-based reconstruction for the impact problems by using DPNNs},
+  title={High-Accurate Model for Time-Dependent Collision with Few Simulations},
   author={Yu Lia, Hu Wanga, Wenquan Shuai, et al},
   journal={arXiv:1905.03229},
   year={2019}
