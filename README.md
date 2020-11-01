@@ -43,7 +43,15 @@ The 3D Computer Aided Design (CAD) model of the impact problem is presented. The
 The dataset of the impact process contains 563 images. The pixels of each one is `480x960x3`. You can download the ***picture_480x960_563_samples.7z***, and a dataset with 5,633 samples will be upload subsequently.
 
 ## How it is generated
-The impact case is simulated by the Abaqus CAE, and the iterations are designed as 5,633. Then run the script from the `code/` folder. `_abaqus8_.guiLog`, the images can be saved iteration by iteration.
+The impact case is simulated by the Abaqus CAE. Then run the script from the `code/` folder. `ABAQUS_script.py`.
+The case of the script is a `Thin-Wall structure` in Section 5 of `《High-Accurate Model for Time-Dependent Collision with Few Simulations》`, bu its geometric parameters aredifferent.
+
+```
+inte_steps: the simulated iterations of a impact process
+impact_time: the impact time
+sample_size: number of different design of TW
+mesh_size: size of mesh
+```
 
 You can generate your own dataset just modify the job name in the `code/` folder. `_abaqus8_.guiLog`:
 
